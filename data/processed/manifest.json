@@ -1,0 +1,192 @@
+{
+  "source": "LINERLIB",
+  "schema_version": "1.0",
+  "dataset_version": "1.2",
+  "provenance": {
+    "original_publication": "Brouer, Berit D., Alvarez, J. Fernando, Plum, Christian Edinger Munk, Pisinger, David, Sigurd, Mikkel M. \"A base integer programming model and benchmark suite for liner shipping network design.\" Transportation Science (forthcoming 2013).",
+    "technical_report": "Løfstedt, Berit, et al. \"An integer programming model and benchmark suite for liner shipping network design.\" DTU Management Engineering report 19.2010.",
+    "external_sources": [
+      "NIMA Pub. 151 (distances)",
+      "Hamburg Index (port info)",
+      "Alphaliner charter rates 2000–2010",
+      "Drewry Shipping Consultants (freight rates)",
+      "Hapag-Lloyd freight quotes"
+    ],
+    "data_last_viewed": "January 2011",
+    "manifest_generated": "2026-09-12T07:34:27.827397+00:00"
+  },
+  "files": [
+    {
+      "path": "Demand_Baltic.csv",
+      "sha256": "562538e34c827ab6b83468c40bcd4c94f323bcf22f23e9bcedf976c035cdab37",
+      "size_bytes": 555
+    },
+    {
+      "path": "Demand_EuropeAsia.csv",
+      "sha256": "a356d81639e8384d10cd10062fd2047af0b98062dd502805478fc83be671effa",
+      "size_bytes": 88066
+    },
+    {
+      "path": "Demand_Mediterranean.csv",
+      "sha256": "11663e378658f3ae0f8d88e0b295560d3f36e12d74d43e7ab56ceb97afe49dcf",
+      "size_bytes": 9107
+    },
+    {
+      "path": "Demand_Pacific.csv",
+      "sha256": "05dcc50de0f47877362bd294b6b75582fd1e8e502edef4e48ca6a77160442e2a",
+      "size_bytes": 15967
+    },
+    {
+      "path": "Demand_WAF.csv",
+      "sha256": "54cac4b356253628add5862eb79679750d58047191398a2b9543ee0dc1c85a07",
+      "size_bytes": 915
+    },
+    {
+      "path": "Demand_WorldLarge.csv",
+      "sha256": "b1a6cdd2add222ab4ea7530b8b7f72c265a8d5a5d6bbc8e52efeb78a6124075e",
+      "size_bytes": 213047
+    },
+    {
+      "path": "Demand_WorldSmall.csv",
+      "sha256": "3b1819dfe8b17f26cfe2724d9a46b6cdce45d76b1b500fff35a4219c21983e48",
+      "size_bytes": 40006
+    },
+    {
+      "path": "Demand_WorldSmall_Fixed_Sep.csv",
+      "sha256": "fd46294e5b71bcc6f7e49e6803a971a884be2b520c9a3bbd3bfe8f56b4703016",
+      "size_bytes": 40000
+    },
+    {
+      "path": "dist_dense.csv",
+      "sha256": "4454cc8fa1074a756e0fe0ea852c3d202568d213fa12d4da20f158d6aa3ebff6",
+      "size_bytes": 1397675
+    },
+    {
+      "path": "dist_sparse.csv",
+      "sha256": "0008db7fcd9f39a5df9b5e11f39f1235d087f4f2aa985f5e0447f7982eb8a162",
+      "size_bytes": 90551
+    },
+    {
+      "path": "fleet_Baltic.csv",
+      "sha256": "7c6e2ec0f3fa959780a7299e50506cf5f02303c386045df0d0a64d06ba33ce3e",
+      "size_bytes": 48
+    },
+    {
+      "path": "fleet_EuropeAsia.csv",
+      "sha256": "7dd95b77128ab83a113b9d603c2d2159b3145cd2583dac6891f0e8e1d2aa7907",
+      "size_bytes": 114
+    },
+    {
+      "path": "fleet_Mediterranean.csv",
+      "sha256": "88ce894b223b2de06272463eb8f1dac3c621ce2a111a9835b68ec887e69efb41",
+      "size_bytes": 63
+    },
+    {
+      "path": "fleet_Pacific.csv",
+      "sha256": "b0f7d7ab900cf1081b42c775ebe08a2c33b2b62b83c865aa49c3394abd3a6243",
+      "size_bytes": 82
+    },
+    {
+      "path": "fleet_WAF.csv",
+      "sha256": "a14fe2c2e2fc48402189b7f9518754033c7f0ce46631721e0d754ba834636edc",
+      "size_bytes": 49
+    },
+    {
+      "path": "fleet_WorldLarge.csv",
+      "sha256": "2b7b841bc63dba3a2720ea304a6a4de79084f62bc5ba51a51797a889bd0d2b90",
+      "size_bytes": 117
+    },
+    {
+      "path": "fleet_WorldSmall.csv",
+      "sha256": "a8986ee2bfeda133fdc069292319bfa5f038d329359f519ec22872133a68e216",
+      "size_bytes": 115
+    },
+    {
+      "path": "fleet_data.csv",
+      "sha256": "5054eb5178cedbe28e33a3c6dde05e6d226025918f80250b7c148b8d846f458c",
+      "size_bytes": 503
+    },
+    {
+      "path": "ports.csv",
+      "sha256": "6c6d579eff5ed4d0925af7ea25b61c406c457737a1eaf7d0d31787c7b912bc79",
+      "size_bytes": 34295
+    },
+    {
+      "path": "rots.json",
+      "sha256": "2089df25bb69ace3f0352852b755fdfd59496d110771f1f02f03a8f356ff6be6",
+      "size_bytes": 591
+    },
+    {
+      "path": "transittime_revision\\Demand_EuropeAsia_tt.csv",
+      "sha256": "ea96069f4bd49349d72abcd160899525ed500d2bec96fba3cdc1c4c9beaafe2b",
+      "size_bytes": 88069
+    },
+    {
+      "path": "transittime_revision\\Demand_Pacific_tt.csv",
+      "sha256": "faa6f9f24d098340388cdea2f688658f536416f001f65d7d620646bd84ff05f2",
+      "size_bytes": 15969
+    },
+    {
+      "path": "transittime_revision\\Demand_WAF_tt.csv",
+      "sha256": "f42cd4fac9d5eb283160ac2c73784121668201281c83ddd85061ad647b04bf9b",
+      "size_bytes": 921
+    },
+    {
+      "path": "transittime_revision\\Demand_WorldLarge_tt.csv",
+      "sha256": "b1a6cdd2add222ab4ea7530b8b7f72c265a8d5a5d6bbc8e52efeb78a6124075e",
+      "size_bytes": 213047
+    },
+    {
+      "path": "transittime_revision\\Demand_WorldSmall_tt.csv",
+      "sha256": "f60ea4c05e0764953252ebaaf247dddf88b6af7ed41ee21cfd99e3cdfdd8678b",
+      "size_bytes": 40026
+    },
+    {
+      "path": "transittime_revision\\README.txt",
+      "sha256": "b64f05640be6e2c2cac441e2a7e84ee1747484a528345bc9a7aaac07b3f23853",
+      "size_bytes": 983
+    },
+    {
+      "path": "transittime_revision\\README.txt~",
+      "sha256": "7d7d18981baa67bcf8cf62e88010eabfd5515606441477bfb223f991d72cd5e7",
+      "size_bytes": 547
+    }
+  ],
+  "instances": {
+    "Baltic": {
+      "demand_file": "Demand_Baltic.csv",
+      "fleet_file": "fleet_Baltic.csv",
+      "verification_status": "VERIFIED"
+    },
+    "WAF": {
+      "demand_file": "Demand_WAF.csv",
+      "fleet_file": "fleet_WAF.csv",
+      "verification_status": "VERIFIED"
+    },
+    "Mediterranean": {
+      "demand_file": "Demand_Mediterranean.csv",
+      "fleet_file": "fleet_Mediterranean.csv",
+      "verification_status": "VERIFIED"
+    },
+    "Pacific": {
+      "demand_file": "Demand_Pacific.csv",
+      "fleet_file": "fleet_Pacific.csv",
+      "verification_status": "VERIFIED"
+    },
+    "WorldSmall": {
+      "demand_file": "Demand_WorldSmall.csv",
+      "fleet_file": "fleet_WorldSmall.csv",
+      "verification_status": "VERIFIED"
+    },
+    "WorldLarge": {
+      "demand_file": "Demand_WorldLarge.csv",
+      "fleet_file": "fleet_WorldLarge.csv",
+      "verification_status": "DISCREPANCY"
+    },
+    "EuropeAsia": {
+      "demand_file": "Demand_EuropeAsia.csv",
+      "fleet_file": "fleet_EuropeAsia.csv",
+      "verification_status": "DISCREPANCY"
+    }
+  }
+}

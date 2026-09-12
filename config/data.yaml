@@ -1,0 +1,71 @@
+# P1 Data Layer Configuration
+# ----------------------------
+# Controls where raw LINERLIB data lives and how it is interpreted.
+# None of the values here modify raw data; they only guide the loader.
+
+source:
+  root: "data/LINERLIB-master (1)/LINERLIB-master/data"
+  version: "1.2"           # LINERLIB release version (per readme.txt)
+  provenance: "Brouer et al. 2013, Transportation Science"
+  last_viewed: "January 2011"
+
+instances:
+  Baltic:
+    demand_file: "Demand_Baltic.csv"
+    fleet_file: "fleet_Baltic.csv"
+    # paper says 12 ports -> verified from demand file
+  WAF:
+    demand_file: "Demand_WAF.csv"
+    fleet_file: "fleet_WAF.csv"
+    # paper says 19p/38d; actual = 20p/37d (acknowledged in readme v1.2)
+  Mediterranean:
+    demand_file: "Demand_Mediterranean.csv"
+    fleet_file: "fleet_Mediterranean.csv"
+  Pacific:
+    demand_file: "Demand_Pacific.csv"
+    fleet_file: "fleet_Pacific.csv"
+  WorldSmall:
+    demand_file: "Demand_WorldSmall_Fixed_Sep.csv"   # prefer fixed over original
+    fleet_file: "fleet_WorldSmall.csv"
+    # NOTE: Demand_WorldSmall.csv has 7 rows with decimal FFEPerWeek (e.g. 1.86
+    # instead of 1860).  Demand_WorldSmall_Fixed_Sep.csv corrects these.
+  WorldLarge:
+    demand_file: "Demand_WorldLarge.csv"
+    fleet_file: "fleet_WorldLarge.csv"
+    # paper says 197 ports / ??? demands; actual demand has 201 ports and
+    # 7 duplicate OD pairs (see data_quality_report below).
+  EuropeAsia:
+    demand_file: "Demand_EuropeAsia.csv"
+    fleet_file: "fleet_EuropeAsia.csv"
+    # paper says 111 ports; actual demand references 114 unique ports.
+
+shared_files:
+  ports:      "ports.csv"          # 435-port master catalogue, all instances draw from it
+  fleet_data: "fleet_data.csv"     # 6 vessel type definitions
+  dist_dense: "dist_dense.csv"     # all-pairs directed distances
+  dist_sparse: "dist_sparse.csv"   # sparse adjacency (no header row)
+  rots:       "rots.json"          # sample rotations (not instance-specific)
+
+transittime_revision:
+  dir: "transittime_revision"
+  # Files in this directory override TransitTime for the matching instance.
+  # Only applies to: WAF, Pacific, WorldSmall, EuropeAsia, WorldLarge.
+  # WorldLarge has zero changes (identical content hash).
+  applied_to:
+    - "WAF"
+    - "Pacific"
+    - "WorldSmall"
+    - "EuropeAsia"
+    - "WorldLarge"
+
+validation:
+  fail_fast: false        # raise on ERROR; continue on WARNING/INFO
+  warn_on:
+    - "missing_coordinate"
+    - "empty_draft"
+    - "duplicate_od_pair"
+    - "asymmetric_distance"
+
+normalization:
+  default_method: "min_max"   # min_max | zscore | none
+  # Per-field overrides can be specified here; left blank for auto-detection later.

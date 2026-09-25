@@ -1,12 +1,28 @@
+# Python
 __pycache__/
 *.py[cod]
 
+# Test / type-check caches
 .pytest_cache/
 .mypy_cache/
 
+# Model checkpoints
 checkpoints/
 *.pt
 *.pth
 
+# Generated experiment / benchmark artifacts
+experiments/
+results/
+data_utilization/
+
+# Generated runtime outputs
+pipeline_output.json
+RL_pipeline_results.json
+.rawdata_baseline.json
+tuning_results.json
+tune_pipeline.py
+
+# OS
 .DS_Store
 Thumbs.db

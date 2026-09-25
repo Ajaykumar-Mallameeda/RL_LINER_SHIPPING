@@ -1,0 +1,92 @@
+# Benchmark Configuration
+# RL_LINER_SHIPPING — P0 Frozen Configuration
+# DO NOT modify without P0 revision approval
+
+benchmarks:
+  paper_reproduction:
+    description: "Instances reported in Dutta et al. (2024) Tables 1-2"
+    instances:
+      - Baltic
+      - WAF
+      - WorldSmall
+
+  scaling:
+    description: "All seven LINERLIB instances for scaling analysis"
+    instances:
+      - Baltic
+      - WAF
+      - Mediterranean
+      - Pacific
+      - WorldSmall
+      - EuropeAsia
+      - WorldLarge
+
+instances:
+  Baltic:
+    ports: 12
+    demands: 22
+    total_ffe_week: 4904
+    fleet_file: data/fleet_Baltic.csv
+    demand_file: data/Demand_Baltic.csv
+    vessel_classes: [Feeder_450, Feeder_800]
+    # LINERLIB benchmark profit (base): $260,948
+    # Paper RL encoder-decoder profit: $276,428
+
+  WAF:
+    ports: 20
+    demands: 37
+    total_ffe_week: 8541
+    fleet_file: data/fleet_WAF.csv
+    demand_file: data/Demand_WAF.csv
+    vessel_classes: [Feeder_450, Feeder_800]
+    # LINERLIB benchmark profit (base): $5,202,534
+    # Paper RL encoder-decoder profit: $5,596,382
+    # NOTE: Article originally declared n=19; corrected to n=20 in LINERLIB v1.2
+
+  Mediterranean:
+    ports: 39
+    demands: 365
+    total_ffe_week: null  # TO COMPUTE
+    fleet_file: data/fleet_Mediterranean.csv
+    demand_file: data/Demand_Mediterranean.csv
+    vessel_classes: [Feeder_450, Feeder_800, Panamax_1200]
+
+  Pacific:
+    ports: 45
+    demands: 722
+    total_ffe_week: null  # TO COMPUTE
+    fleet_file: data/fleet_Pacific.csv
+    demand_file: data/Demand_Pacific.csv
+    vessel_classes: [Feeder_450, Feeder_800, Panamax_1200, Panamax_2400]
+
+  WorldSmall:
+    ports: 47
+    demands: 1764
+    total_ffe_week: null  # TO COMPUTE
+    fleet_file: data/fleet_WorldSmall.csv
+    demand_file: data/Demand_WorldSmall_Fixed_Sep.csv  # Use fixed version (v1.2 correction)
+    vessel_classes: [Feeder_450, Feeder_800, Panamax_1200, Panamax_2400, Post_panamax, Super_panamax]
+    # LINERLIB benchmark profit (base): $32,280,000
+    # Paper RL encoder-decoder profit: $42,320,000
+    # NOTE: Original Demand_WorldSmall.csv has 7 truncated decimal values; use _Fixed_Sep variant
+
+  EuropeAsia:
+    ports: 114
+    demands: 4000
+    total_ffe_week: null  # TO COMPUTE
+    fleet_file: data/fleet_EuropeAsia.csv
+    demand_file: data/Demand_EuropeAsia.csv
+    vessel_classes: [Feeder_450, Feeder_800, Panamax_1200, Panamax_2400, Post_panamax, Super_panamax]
+    # NOTE: Article declares n=111; actual data contains 114 ports
+
+  WorldLarge:
+    ports: 201
+    demands: 9622
+    total_ffe_week: null  # TO COMPUTE
+    fleet_file: data/fleet_WorldLarge.csv
+    demand_file: data/Demand_WorldLarge.csv
+    vessel_classes: [Feeder_450, Feeder_800, Panamax_1200, Panamax_2400, Post_panamax, Super_panamax]
+    # NOTE: Article declares n=197; actual data contains 201 ports
+
+# Port count progression for scaling visualization:
+# 12 → 20 → 39 → 45 → 47 → 114 → 201

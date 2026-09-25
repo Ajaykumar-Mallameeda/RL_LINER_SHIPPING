@@ -21,7 +21,7 @@ from data.provenance import sha256_of, build_manifest, save_manifest, load_manif
 from data.instance import ProvenanceRecord
 
 
-DATA_ROOT = ROOT / "data" / "LINERLIB-master (1)" / "LINERLIB-master" / "data"
+DATA_ROOT = ROOT / "data"
 TMP_MANIFEST = ROOT / "data" / "processed" / "test_manifest.json"
 
 

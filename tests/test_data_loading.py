@@ -27,7 +27,7 @@ from data.schema import INSTANCE_DEFS
 # Paths
 # ---------------------------------------------------------------------------
 
-DATA_ROOT = ROOT / "data" / "LINERLIB-master (1)" / "LINERLIB-master" / "data"
+DATA_ROOT = ROOT / "data"
 
 
 def _loader() -> LINERLIBLoader:

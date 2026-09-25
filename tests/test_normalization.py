@@ -18,7 +18,7 @@ from data.linerlib_loader import LINERLIBLoader
 from data.normalization import Normalizer, FieldStats
 
 
-DATA_ROOT = ROOT / "data" / "LINERLIB-master (1)" / "LINERLIB-master" / "data"
+DATA_ROOT = ROOT / "data"
 
 
 def _loader():

@@ -21,7 +21,7 @@ from data.linerlib_loader import LINERLIBLoader
 from data.validation import Validator, Severity, DataQualityReport
 
 
-DATA_ROOT = ROOT / "data" / "LINERLIB-master (1)" / "LINERLIB-master" / "data"
+DATA_ROOT = ROOT / "data"
 
 
 def _loader():

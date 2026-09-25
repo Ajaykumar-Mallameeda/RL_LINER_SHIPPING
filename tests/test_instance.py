@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT))
 from data.linerlib_loader import LINERLIBLoader
 
 
-DATA_ROOT = ROOT / "data" / "LINERLIB-master (1)" / "LINERLIB-master" / "data"
+DATA_ROOT = ROOT / "data"
 
 
 def _loader():
